@@ -1,0 +1,273 @@
+<!-- Tala om att det är html-dokument -->
+<!DOCTYPE html>
+
+<!-- Alla element ska finnas inom html-taggen -->
+<html>
+<!-- I head placeras saker som inte är innehåll, tex css-filer och javascript -->
+<head>
+    <!-- Dessa 3 meta-taggar måste vara först i head för att alla tecken (åäö) och Bootstrap ska fungera korrekt -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonter -->
+    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+
+    <!-- Koppla in Bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!-- Koppla in egen CSS-fil style.css OBS! Ha den som sista css-fil -->
+    <link rel="stylesheet" type ="text/css" href="css/style.css">
+
+    <!-- Koppla in och JQuery Bootstrap javascript -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.2.0/angularfire.min.js"></script>
+
+    <!-- Koppla in egen JavaScript-fil funktion.js OBS! Ha den som sista js-fil -->
+    <script type="text/javascript" src="js/funktion.js"></script>
+    <link rel="icon" href="bilder/penslar.jpeg" type="image/gif" sizes="16x16">
+    <!-- I title skriver du titeln som webbläsarfönstret ska ha när den här sidan besöks-->
+    <title>Konstgalleriet</title>
+</head>
+
+<center><body>
+
+<!-- I body finns allt innehåll på hemsidan -->
+    
+    <!-- I nav finns alla länkar eller knappar för navigering, tex en menyrad -->
+
+    <!-- Home (fixa scroll grej css) -->
+        <nav class="nav navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html" id="au">Startsida</a></li>
+                    <li><a href="#C2" id="au">Mina Konstverk</a></li>
+                    <li><a href="#C3" id="au">Kontakta mig</a></li>
+                    <li><a href="#C4" id="au">Övrig information</a></li>
+                    <li><a href="#C5" id="au">Bildgalleriet</a></li>
+                    <li><a href="menyval1.html" id="au">Kommentarsfält</a></li>
+                </ul>
+            </div>
+        </nav>
+
+<!--parallax
+    <div class="penslar">
+      <img src="bilder/penslar.jpeg" alt="penslar" />
+    </div> -->   
+
+    <div class= "parallax"></div>
+    <div class= bildtext><h1>Julias konstgalleri</h1>
+    </div>
+
+<!--Galleri flik (slideshow)-->
+
+    <h2 id="C2">Mina konstverk</h2>
+
+    <div id="myCarousel" class="carousel" data-ride="carousel">
+  <!-- Indicators -->
+  
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="¨1"></li>
+    <li data-target="#myCarousel" data-slide-to="¨2"></li>
+  </ol>
+
+  <div class="item active">
+    <img src="bilder/huvuden.jpeg" alt="huvuden">
+      <div class="carousel-caption">
+        <h3>Stora Huvuden</h3>
+        <p>400 kr/st</p>
+        <a id="b0" href="https://www.paypal.com/se/home" class="btn btn-primary">Köp</a>     
+      </div>  
+  </div>
+
+    <div class="item">
+      <img src="bilder/artschool.jpeg" alt="art school of greece">
+      <div class="carousel-caption">
+      <h3>Art School of Greece</h3>
+      <p>500 kr</p>
+      <a id="b1" href="https://www.paypal.com/se/home" class="btn btn-primary">Köp</a>  
+    </div>
+  </div>
+
+  <div class="item">
+      <img src="bilder/peace.jpeg" alt="frihetsgudinnan">
+      <div class="carousel-caption">
+      <h3>Frihetsgudinnan</h3>
+      <p>899 kr</p>  
+      <a id="b2" href="https://www.paypal.com/se/home" class="btn btn-primary">Köp</a>
+      </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">prev</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">next</span>
+  </a>
+  </div>
+
+  <p id="bildspeltext">Det här är endast några få utvalda bilder.<br>
+  Gå längre ner på sidan för att se det stora galleriet!</p>
+
+<!-- Kontakt flik -->
+    <div class="kontakta">
+        <h2 id="C3">Kontakta mig här!</h2>
+        <p>Vill du beställa ett konstverk eller har du någon fråga?</p>
+        <p>Här kan du snabbt och enkelt skicka ett mail så svarar jag inom kort!</p>
+    </div>
+
+    <div class="mailruta">
+        <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <label for="name">Namn:</label><br />
+                <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+            </div>
+            <div class="row">
+                <label for="email">Email:</label><br />
+                <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+            </div>
+            <div class="row">
+                <label for="message">Ditt meddelande:</label><br />
+                <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+            </div>
+            <input id="submit_button" type="submit" value="Send email" />
+        </form>                     
+    </div>
+
+<!--Info flik -->
+
+
+    <div class="info">
+        <h2 id="C4">Övrig information</h2>
+
+        <p>Hej! Mitt namn är Julia och jag gör konst<br>
+        Jag går inte i någon konstskola och har aldig gått i någon.<br>
+        Jag är bara naturligt begåvad och väldigt cool helt enkelt.<br>
+        PS: om det inte framstår tydligt nog:<br>
+        denna sida är ett skämt och jag äger inga bilder.</p>
+        <p>På denna webbsida kan du köpa eller förbeställa mina konstverk.<br>
+        Kontakta mig om du har några frågor.</p>
+
+    </div>    
+
+    <div class="sociala">
+        <h3 id="C6">Hitta mig på sociala medier:</h3>
+        <br>
+        <p>Instagram: <a href="https:www.instagram.com" id="soc">@instagramjulia</a></p>
+        <p>Twitter: <a href="https:www.twitter.com" id="soc">@twitterjulia</a></p>
+        <p>Facebook: <a href="https:www.facebook.com" id="soc">@facebookjulia</a></p>
+
+    </div>
+
+<!--Galleriet-->
+
+    <div class="galleri">
+        <h2 id="C5">Bildgalleriet</h2>
+        <div id="collage">
+
+            <div class="container">
+                <img src="bilder/flowo.jpeg" alt="flow" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Flow</div>
+                </div>
+            </div>
+                
+            <div class="container">
+                <img src="bilder/fotofonster.jpeg" alt="fonster" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Fönster</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="bilder/monalisa.jpeg" alt="monalisa" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Mona Lisa</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="bilder/artschool.jpeg" alt="artschool" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Art School</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="bilder/huvuden.jpeg" alt="huvuden" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Huvuden</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="bilder/peace.jpeg" alt="peace" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Frihetsguddinan</div>
+                </div>
+            </div>
+        
+            <div class="container">
+                <img src="bilder/sculpture.jpeg" alt="sculpture" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Staty</div>
+                </div>
+            </div>
+
+            <div class="container">
+                <img src="bilder/closeup.png" alt="closeup" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Närbild</div>
+                </div>
+            </div>
+        
+            <div class="container">
+                <img src="bilder/spiral.jpeg" alt="spiral" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Spiral</div>
+                </div>
+            </div>
+        
+            <div class="container">
+                <img src="bilder/astro.jpeg" alt="astro" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Astronaut</div>
+                </div>
+            </div>
+        
+            <div class="container">
+                <img src="bilder/cykk.jpg" alt="cyckel" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Skulptur</div>
+                </div>
+            </div>
+        
+            <div class="container">
+                <img src="bilder/smok.jpeg" alt="smoke" class="image" style="width:100%">
+                <div class="middle">
+                    <div class="text">Smoke</div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+<div id="inget"></div>
+
+</body></center>
+</html>

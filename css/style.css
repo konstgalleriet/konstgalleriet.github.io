@@ -1,0 +1,263 @@
+body{
+	padding-top: 0;
+}
+
+/*nav uppe*/
+
+.nav{
+	background-color: black;
+	opacity: 0.7;
+	filter: alpha(opacity=50); 
+}
+
+.container {
+	position: relative;
+    width: 100%;
+}
+
+.container2 {
+	background-color: #841a1a;
+	overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/*parallax*/
+
+img{
+	left:0px;
+	top:0px;
+	width:100%;
+	height:900px;
+}
+
+.bildtext{
+	position: absolute; 
+   top: 150px; 
+   left: 650px;
+   font-family: 'Megrim', cursive;
+}
+
+.parallax{
+
+	background-image: url(../bilder/penslar.jpeg);
+	min-height: 700px;
+
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*rubriker*/
+
+h1{
+	font-size: 70px;
+}
+
+#C2 {
+	font-family: 'Noto Serif', serif;
+	font-size: 35px;
+	padding-top: 46px; 
+}
+
+#C3{
+	font-family: 'Noto Serif', serif;
+	padding-top: 46px;
+	padding-bottom: 15px;
+}
+
+#C4{
+	font-family: 'Noto Serif', serif;
+	padding-top: 47px;
+}
+
+#C5{
+	font-family: 'Noto Serif', serif;
+	padding-top: 46px;
+}
+
+#C6{
+	font-family: 'Noto Serif', serif;
+	padding-top: 30px;
+}
+
+#C7 {
+	font-family: 'Megrim', cursive;
+	font-size: 40px;
+	padding-top: 70px;
+}
+
+/* bildspelet*/
+
+#myCarousel{
+	padding-top: 25px;
+	position: relative;
+	max-width: 800px;
+}
+
+.carousel-inner {
+	position: relative;
+}
+
+.carousel-caption{
+	background-color: rgba(0,0,0,0.5);
+	font-family: 'Noto Serif', serif;
+	font-size: 20px;
+}
+
+.carousel-indicators{
+	position: absolute;
+	bottom: 5%;
+
+}
+
+#b0{
+	background-color: #e52020;
+	border-color:#e52020;
+}
+
+#b1{
+	background-color:#c6a96f; 
+	border-color:#c6a96f;
+}
+
+#b2{
+	background-color: #7898e8;
+	border-color: #7898e8;
+}
+
+
+.item a {
+	margin-bottom: 20px;
+}
+
+#bildspeltext{
+	padding-top:20px;
+}
+
+/*kontakta mig*/
+
+.kontakta{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.mailruta{
+	border-style: double;
+	border-color: grey; 
+	border-radius: 10px;
+	width: 300px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	position: center;
+}
+
+/*galleri*/
+
+#collage {
+	line-height: 0;
+	-webkit-column-count: 5;
+	-webkit-column-gap: 0px;
+	-moz-column-count: 5;
+	-moz-column-gap: 0px;
+	column-count: 5;
+	column-gap: 0px;  
+}
+
+#collage img {
+	width: 100% !important;
+	height: auto !important;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .3s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .3s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+	font-family: 'Noto Serif', serif;
+	background: none;
+	color: black;	
+	font-size: 16px;
+}
+
+#inget{
+	height: 300px;
+}
+
+/*kommentarsfält*/
+
+.falt{
+	width: 50%;
+
+}
+
+#bto{
+	background-color:#841a1a;
+	border-color: #841a1a; 
+}
+
+#au {
+	background-color: black;
+	opacity: 0.7;
+	filter: alpha(opacity=50); 
+	color: white;
+	border-radius: 5px;
+	transition: all 0.6s;
+	text-decoration: none;
+}
+
+#au:hover{
+	background-color: white;
+	border-radius: 0;
+	color: black;
+}
+
+#aul{
+	background-color: #841a1a;
+	color: white;
+	border-radius: 5px;
+	transition: all 0.6s;
+	text-decoration: none;
+}
+
+#aul:hover{
+	background-color: white;
+	border-radius: 0;
+	color: #841a1a;
+}
+
+#soc{
+	background-color: white;
+	color: red;
+	border-radius: 5px;
+	transition: all 0.3s;
+	text-decoration: none;
+}
+
+#soc:hover{
+	color: black;
+}
